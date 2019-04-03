@@ -6,9 +6,24 @@ body{
 	margin-right: 20px;
 	margin-top: 20px;
 }
+.navbar-dropdown{
+border-bottom-left-radius: 0px !important;
+border-bottom-right-radius: 0px !important;
+}
 .navbar-brand h1  {
 	margin-right: 20px;
-	margin-top: 20px;
+  margin-top: 20px;
+  font-size: 1em;
+}
+div.container h1 {
+  font-weight: bold;
+}
+figure.image {
+  margin-top: 10px;
+}
+figure.image.is-128x128{
+  height: 100px;
+  width: 100px;
 }
 
 .select{
@@ -47,9 +62,7 @@ div.box-cta{
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
-div.container>h1{
-	font-weight: bold;
-}
+
 @media(min-width: 900px){
 	span>footer.footer{
 	height: 200px;
@@ -66,9 +79,7 @@ div.Nothing-news{
   height: 100px;
   text-align: center;
 }
-div.container h1{
-  text-align: center;
-}
+
 .Slider-article {
   margin-bottom: 40px;
 }
@@ -87,6 +98,9 @@ footer.article{
   margin-left: 40px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+.card{
+  height: 420px;
 }
 .Article{
   margin-left: 50px;
@@ -107,25 +121,42 @@ div.is-3{
 }
 }
 /* information */
+div.ArticleTitle {
+ padding-top: 10px;
+ text-align: center;
+}
 
+div.ArticleBody {
+  padding: 10px;
+  margin-top: 10px;
+  text-align: justify;
+}
 /* Footer */
 .footer{
 	margin-top: -20px;
 }
-.FootHeader{
-	display: inline-flex;
+.FootHeader .footerBar{
+  display: inherit;
+  margin-left: auto;
 }
 .footer ul>li{
 	margin-bottom: 10px;
 }
-div.FooterNav>.navbar{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+h2 p {
+  margin-top: 5px;
 }
-div.FooterNav{
- margin-left: -30px;
- margin-right: -40px;
+.footer-column{
+  border-top: 1px solid black;
+  padding: 20px  0;
+  text-align: center;
+  margin: 0 -50px; 
+}
+.footer-column a{
+  margin-left: 10px;
+}
+
+footer.footer div.navbar-menu {
+     margin: 0 -50px;
 }
 
 /* Icons */
@@ -143,31 +174,22 @@ div.FooterNav{
 .fab:hover {
   background: #765455;
 }
-/* footer contacts */
-.fa-map-marker-alt,.fa-envelope{
-  margin-bottom: 10px;
-}
-.fa-phone{
-  padding-left: 10px;
-}
-.fas{
-  padding: 5px;
-}
-div.column li{
-  margin-left: 10px;
-}
-div.column ul{
-  padding-bottom: 5px;
-}
-h1.title{
-  margin-left: 140px;
-}
-/* 
+
 /* Carousel */
 .Carousel{
   height: 300px;
 }
-div.navbar-menu {
-  margin-left: 500px;
-
+aside.panel {
+   margin-left: auto;
+   height: 97.5%;
+}
+footer div.columns{
+  margin-top: 20px;
+}
+div.navbar{
+  margin-left: auto;
+}
+footer div.footerBar {
+  display:flex;
+  margin:auto;
 }
