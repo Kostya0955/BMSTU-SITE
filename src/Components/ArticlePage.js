@@ -1,9 +1,8 @@
 /* global fetch */
 
-import React, { Component } from 'react'
-import Slider from 'react-slick'
+import React, { Component, Fragment } from 'react'
 
-class Articles extends Component {
+class ArticlePage extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -17,25 +16,20 @@ class Articles extends Component {
     fetch(`http://46.188.118.162:8082/types?name_en=${this.props.type}`)
       .then(response => response.json())
       .then(response => {
-        console.log(response[0])
         response[0]
           .articles
           .sort((a, b) => a.createdAt < b.createdAt ? 1 : -1)
           .forEach(article => {
             if (article.is_active === true) {
               this.elements.push(
-                <div className='column is-3'>
-                  <div className='card'>
-                    <div className='card-image'>
-                      <figure className='image is-4by3'>
-                        <img src={`http://46.188.118.162:8082/${article.poster.url}`} />
-                      </figure>
-                    </div>
-                    <div className='card-content'>
-                      {article.title_ru}
-                    </div>
+                <Fragment>
+                  <div className='ArticleTitle'>
+                    <h1 className='title'>{article.title_ru} </h1>
                   </div>
-                </div>
+                  <div className='ArticleBody'>
+                    {article.body_ru}
+                  </div>
+                </Fragment>
               )
             }
           })
@@ -62,16 +56,6 @@ class Articles extends Component {
       autoplay: true,
       autoplaySpeed: 2000,
       rtl: true
-    };
-    if (this.props.type === 'null') {
-      return (
-        <footer className='article'>
-          <div className='container'>
-            <h1> НОВОСТЕЙ НЕТ </h1>
-            <div className='Nothing-news' />
-          </div>
-        </footer>
-      )
     }
     if (this.state.showLoading === true) {
       return (
@@ -84,11 +68,10 @@ class Articles extends Component {
       )
     }
     return (
-      <div className='columns articles'>
-        {this.elements}
+      <div className=' articles'>
+        {this.elements[0]}
       </div>
     )
   }
 }
-
-export default Articles
+export default ArticlePage
