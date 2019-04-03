@@ -1,0 +1,93 @@
+@import "./variables.scss";
+
+
+footer {
+	background-color: $footer !important;
+
+}
+nav.navbar {
+	background-color: $footer-nav !important;
+}
+h1,strong, a {
+	color: $mainColor !important;
+}
+section.hero {
+	background-color: $head !important;
+}
+h1.title{
+	color: $headFont !important;
+}
+
+
+div.container>h1 {
+	color: $mainColor !important;
+	font-style: bold !important;
+}
+span>footer.footer {
+	border-top: 1px solid $mainColor  !important;
+	background-color: $footer-nav !important;
+}
+
+
+div.navbar-dropdown{
+	background-color: $dropdown  !important; 
+}
+div.navbar-dropdown a{
+	color: $test  !important; 
+}
+div.navbar-dropdown a:hover{
+	color: $mainColor !important; 
+	background-color: $hover  !important; 
+}
+a:hover{
+	background-color: $hover  !important; 
+}
+div.articles{
+background-color: $footer !important; 
+}
+
+.FooterNav a.navbar-item:hover{
+	background-color: $footer !important; 
+}
+div.Slider-article{
+	background-color: $footer !important;
+}
+ul.slick-dots{
+	background-color: $footer !important;
+}
+.Slider-article h2{
+	color: $mainColor !important;
+	font-weight: bold !important;
+	font-size: 1.9em;
+}
+.Slider-article h3{
+	color: $mainColor !important;
+	font-weight: bold !important;
+	font-size: 1.1em;
+}
+a:hover{
+	color:  $hoverText  !important;
+}
+h3:hover {
+ color: $hoverText !important; 
+}
+div.navbar{
+	background-color:  $footer-nav !important;
+}
+// footer
+footer div.navbar-menu{
+	background-color:  $aboveFooter !important;
+}
+footer div.navbar-menu a {
+	color: $head !important;
+}
+
+.FootHeader {
+	background: $footer-nav !important;
+}
+.footer-column {
+	background: $mainColor !important;
+}
+.footer-column  a {
+	color: $head !important;
+}

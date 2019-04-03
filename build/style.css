@@ -1,0 +1,173 @@
+/* Header */
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.navbar-brand a {
+	margin-right: 20px;
+	margin-top: 20px;
+}
+.navbar-brand h1  {
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.select{
+	float: right;
+}
+
+div.box-cta{
+    margin-bottom: 1px;
+}
+.has-text-centered>a{
+	padding: 20px;
+}
+
+.slider {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  overflow-x: auto;
+}
+.slide {
+  width: 300px;
+  flex-shrink: 0;
+  height: 100%;
+}
+.example-enter {
+  opacity: 0.01;
+}
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.example-leave {
+  opacity: 1;
+}
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+div.container>h1{
+	font-weight: bold;
+}
+@media(min-width: 900px){
+	span>footer.footer{
+	height: 200px;
+}
+}
+div.dropdown button {
+ background-color: Transparent;
+ background-repeat:no-repeat;
+ border: none;
+ outline:none;
+}
+
+div.Nothing-news{
+  height: 100px;
+  text-align: center;
+}
+div.container h1{
+  text-align: center;
+}
+.Slider-article {
+  margin-bottom: 40px;
+}
+.Slider-article img {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+footer.article{
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+.Slider-article h2{
+  margin-left: 20px;
+}
+.Slider-article h3{
+  margin-left: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.Article{
+  margin-left: 50px;
+}
+.Article img {
+  border-radius: 8px;
+  box-shadow: 3px 3px grey;
+
+}
+div.is-3{
+  margin-left: 100px;
+  margin-right: 10px;
+}
+
+@media(max-width: 600px){
+  div.Article{
+  padding-right: 30px;
+}
+}
+/* information */
+
+/* Footer */
+.footer{
+	margin-top: -20px;
+}
+.FootHeader{
+	display: inline-flex;
+}
+.footer ul>li{
+	margin-bottom: 10px;
+}
+div.FooterNav>.navbar{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+div.FooterNav{
+ margin-left: -30px;
+ margin-right: -40px;
+}
+
+/* Icons */
+.fab {
+  padding: 5px;
+  margin: 5px;
+  font-size: 25px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  background: #997576;
+  color: white;
+}
+.fab:hover {
+  background: #765455;
+}
+/* footer contacts */
+.fa-map-marker-alt,.fa-envelope{
+  margin-bottom: 10px;
+}
+.fa-phone{
+  padding-left: 10px;
+}
+.fas{
+  padding: 5px;
+}
+div.column li{
+  margin-left: 10px;
+}
+div.column ul{
+  padding-bottom: 5px;
+}
+h1.title{
+  margin-left: 140px;
+}
+/* 
+/* Carousel */
+.Carousel{
+  height: 300px;
+}
+div.navbar-menu {
+  margin-left: 500px;
+
+}

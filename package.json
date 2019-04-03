@@ -1,0 +1,37 @@
+{
+  "name": "web-site",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bulma": "^0.7.4",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.3",
+    "react-css-collapse": "^3.6.0",
+    "react-dom": "^16.8.3",
+    "react-intl": "^2.8.0",
+    "react-scripts": "2.1.5",
+    "react-slick": "^0.23.2",
+    "react-transition-group": "^1.2.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
