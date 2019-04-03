@@ -41,10 +41,30 @@ class App extends React.Component {
               <h1 className='title'>
               Факультет <br />Международных образовательных<br /> программ <br />МГТУ им. Н.Э.Баумана
               </h1>
+              
+             
               <div className = 'headButtons'> 
-              <a class="button">Button</a>
-              <a class="button">Button</a>
-              <a class="button">Button</a>
+               
+              <a class="button">Регистрация</a>
+              <a class="button">Вход</a>
+                <span class="select">
+                  <select>
+                    <option>RU</option>
+                    <option>EN</option>
+                    <option>FR</option>
+                  </select>
+                </span>
+              </div>
+             
+              <div class="field has-addons">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Найти" />
+                </div>
+                <div class="control">
+                  <a class="button is-info">
+                    <i class="fas fa-search"></i>
+                       </a>
+                </div>
               </div>
             </div>
           </div>
@@ -52,8 +72,7 @@ class App extends React.Component {
             <Navigation type='header' />
           </div>
         </section>
-        {/* <MainPage type='News'  data={data}/> */}
-        <ArticlePage type = 'News'/>
+         <MainPage  data={data}/>
         {/* footer */}
         <footer className='footer'>
           <Navigation type='footer' />

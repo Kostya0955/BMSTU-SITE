@@ -1,6 +1,7 @@
 /* global fetch */
 
 import React, { Component, Fragment } from 'react'
+import Articles from './Article'
 
 class ArticlePage extends Component {
   constructor (props) {
@@ -13,26 +14,19 @@ class ArticlePage extends Component {
   }
 
   componentDidMount () {
-    fetch(`http://46.188.118.162:8082/types?name_en=${this.props.type}`)
+    fetch(`http://46.188.118.162:8082/articles?id=${this.props.match.params.id}`)
       .then(response => response.json())
       .then(response => {
-        response[0]
-          .articles
-          .sort((a, b) => a.createdAt < b.createdAt ? 1 : -1)
-          .forEach(article => {
-            if (article.is_active === true) {
-              this.elements.push(
-                <Fragment>
-                  <div className='ArticleTitle'>
-                    <h1 className='title'>{article.title_ru} </h1>
-                  </div>
-                  <div className='ArticleBody'>
-                    {article.body_ru}
-                  </div>
-                </Fragment>
-              )
-            }
-          })
+        this.elements.push(
+          <Fragment>
+            <div className='ArticleTitle'>
+              <h1 className='title'>{response.title_ru} </h1>
+            </div>
+            <div className='ArticleBody'>
+              {response.body_ru}
+            </div>
+          </Fragment>
+        )
         this.setState({
           'showLoading': false,
           'showError': false
@@ -48,15 +42,6 @@ class ArticlePage extends Component {
   }
 
   render () {
-    const settings = {
-      dots: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      rtl: true
-    }
     if (this.state.showLoading === true) {
       return (
         <p>Loading</p>
@@ -69,6 +54,7 @@ class ArticlePage extends Component {
     }
     return (
       <div className=' articles'>
+        <Articles type="News" />
         {this.elements[0]}
       </div>
     )

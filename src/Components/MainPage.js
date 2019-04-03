@@ -1,9 +1,11 @@
 /* global fetch */
 
 import React, { Component, Fragment } from 'react'
+import Article from './Article.js'
+import { Link } from 'react-router-dom'
 
 class MainPage extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       'showLoading': true,
@@ -23,8 +25,8 @@ class MainPage extends Component {
     this.elements = []
   }
 
-  componentDidMount () {
-    fetch(`http://46.188.118.162:8082/types?name_en=${this.props.type}`)
+  componentDidMount() {
+    fetch(`http://46.188.118.162:8082/types?name_en=News`)
       .then(response => response.json())
       .then(response => {
         console.log(response[0])
@@ -37,9 +39,11 @@ class MainPage extends Component {
                 <div className='column is-3'>
                   <div className='card'>
                     <div className='card-image'>
-                      <figure className='image is-4by3'>
-                        <img src={`http://46.188.118.162:8082/${article.poster.url}`} />
-                      </figure>
+                      <Link to={`/news/${article.id}/`}>
+                        <figure className='image is-4by3'>
+                          <img src={`http://46.188.118.162:8082/${article.poster.url}`} />
+                        </figure>
+                      </Link>
                     </div>
                     <div className='card-content'>
                       {article.title_ru}
@@ -63,7 +67,7 @@ class MainPage extends Component {
       })
   }
 
-  _changeActive (id) {
+  _changeActive(id) {
     this.setState({
       activeID: id,
       wrapperStyle: {
@@ -74,7 +78,7 @@ class MainPage extends Component {
       }
     })
   }
-  _buttonColour () {
+  _buttonColour() {
     if (!this.state.buttonHover) {
       this.setState({
         buttonHover: true,
@@ -91,7 +95,7 @@ class MainPage extends Component {
       })
     }
   }
-  render () {
+  render() {
     const settings = {
       dots: true,
       infinite: true,
@@ -139,16 +143,14 @@ class MainPage extends Component {
           </section>
 
         </div>
-        <div className='columns articles'>
-          {this.elements}
-        </div>
+        <Article type="News" />
       </Fragment>
     )
   }
 }
 
-class Panel extends React.Component {
-  render () {
+class Panel extends Component {
+  render() {
     return (
       <aside className='panel' style={this.props.panelStyle}>
         <h2 className='panel-header'>{this.props.data.header}</h2>
@@ -163,15 +165,15 @@ class Panel extends React.Component {
     )
   }
 }
-class Selectors extends React.Component {
-  _handleClick (e) {
+class Selectors extends Component {
+  _handleClick(e) {
     if (this.props.id !== this.props.activeID) {
       this.props._changeActive(this.props.id)
     } else {
 
     }
   }
-  render () {
+  render() {
     return (
       <div className='selectors'>
         {this.props.data.map((item) =>
@@ -187,8 +189,8 @@ class Selectors extends React.Component {
     )
   }
 }
-class Selector extends React.Component {
-  render () {
+class Selector extends Component {
+  render() {
     let componentClass = 'selector'
     if (this.props.activeID === this.props.id) {
       componentClass = 'selector active'

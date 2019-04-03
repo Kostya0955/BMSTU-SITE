@@ -17,8 +17,17 @@ section.hero {
 h1.title{
 	color: $headFont !important;
 }
+.button.is-info {
+   background-color: $footer-nav  !important;
+}
 
-
+.select select {
+	color: $mainColor !important;
+   
+}
+option{
+		color: $mainColor !important;
+}
 div.container>h1 {
 	color: $mainColor !important;
 	font-style: bold !important;
